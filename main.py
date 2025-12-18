@@ -1,5 +1,5 @@
 import pygame
-import sys
+import sys, os
 import random
 from player import Player
 from enemy import Enemy
@@ -7,6 +7,12 @@ from level_loader import load_level
 from fireball import Fireball
 
 pygame.init()
+def resource_path(relative):
+    try:
+        base = sys._MEIPASS
+    except Exception:
+        base = os.path.abspath(".")
+    return os.path.join(base, relative)
 
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
