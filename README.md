@@ -93,7 +93,9 @@ Frostbound-run/
 ### Install dependencies
 ```bash
 pip install pygame
+```
 
 ## Run the game
 ```bash
 Run the game
+```
