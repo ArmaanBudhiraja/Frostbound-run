@@ -97,5 +97,49 @@ pip install pygame
 
 ## Run the game
 ```bash
-Run the game
+python3 main.py
 ```
+
+## Deployment
+
+The game can be packaged as a standalone application using PyInstaller.
+
+### MacOS
+```bash
+pyinstaller --onefile --windowed \
+--add-data "assets:assets" \
+--add-data "levels:levels" \
+main.py
+```
+
+### Windows
+```bash
+pyinstaller --onefile --noconsole ^
+--add-data "assets;assets" ^
+--add-data "levels;levels" ^
+main.py
+```
+
+## Learning Outcomes
+
+This project demonstrates:
+- Game physics and collision systems
+- Sprite animation handling
+- Enemy AI logic
+- Level design using external data
+- Debugging real deployment issues
+- Packaging Python applications for distribution
+
+## Future Improvements
+
+- Sound effects and background music
+- Boss enemies
+- Moving platforms
+- Save/load system
+- Controller support
+- Difficulty scaling
+
+## Author
+
+Developed by Armaan Budhiraja
+Built as a learning and portfolio project using Python and Pygame.
