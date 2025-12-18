@@ -70,3 +70,30 @@ Frostbound-run/
 │ └── level5.json
 │
 └── README.md
+
+---
+
+## 🧠 Technical Highlights
+
+- Object-oriented design for Player, Enemy, and Projectiles
+- Enemy state machine (`alive → dying → dead`)
+- Collision handling from all sides (top, bottom, left, right)
+- Level data driven by JSON files
+- Asset loading compatible with PyInstaller using a shared `resource_path()` utility
+- Clean separation of game logic, rendering, and data
+
+---
+
+## 🛠 Installation (Run from Source)
+
+### Prerequisites
+- Python 3.10+
+- Pygame
+
+### Install dependencies
+```bash
+pip install pygame
+
+## Run the game
+```bash
+Run the game
