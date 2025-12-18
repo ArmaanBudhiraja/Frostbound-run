@@ -1,8 +1,8 @@
 import pygame
-
+from main import resource_path
 class Fireball:
     def __init__(self, x, y, direction):
-        self.image = pygame.image.load("assets/images/fireball.png").convert_alpha()
+        self.image = pygame.image.load(resource_path("assets/images/fireball.png")).convert_alpha()
         self.image = pygame.transform.scale(self.image, (32, 32))
         self.direction = direction
         self.speed = 12

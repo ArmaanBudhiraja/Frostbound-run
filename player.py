@@ -1,5 +1,5 @@
 import pygame
-
+from main import resource_path
 class Player:
     def __init__(self, x, y):
         self.scale = 0.1
@@ -7,17 +7,17 @@ class Player:
         self.jump_power = -15
         self.gravity = 0.8
 
-        self.idle_img = self.load_image("assets/player/idle.png")
+        self.idle_img = self.load_image(resource_path("assets/player/idle.png"))
         self.walk_imgs = [
-            self.load_image("assets/player/walk1.png"),
-            self.load_image("assets/player/walk2.png")
+            self.load_image(resource_path("assets/player/walk1.png")),
+            self.load_image(resource_path("assets/player/walk2.png"))
         ]
         self.jump_imgs = [
-            self.load_image("assets/player/jump1.png"),
-            self.load_image("assets/player/jump2.png"),
-            self.load_image("assets/player/jump2.png"),
-            self.load_image("assets/player/jump3.png"),
-            self.load_image("assets/player/jump4.png")
+            self.load_image(resource_path("assets/player/jump1.png")),
+            self.load_image(resource_path("assets/player/jump2.png")),
+            self.load_image(resource_path("assets/player/jump2.png")),
+            self.load_image(resource_path("assets/player/jump3.png")),
+            self.load_image(resource_path("assets/player/jump4.png"))
         ]
 
         w, h = self.idle_img.get_size()

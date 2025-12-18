@@ -1,5 +1,5 @@
 import pygame
-
+from main import resource_path
 class Enemy:
     def __init__(self, x, y, left_limit, right_limit):
         self.scale = 0.1
@@ -8,11 +8,11 @@ class Enemy:
         self.gravity = 0.8
 
         self.walk_imgs = [
-            self.load_image("assets/enemy/walk1.png"),
-            self.load_image("assets/enemy/walk2.png"),
-            self.load_image("assets/enemy/walk3.png")
+            self.load_image(resource_path("assets/enemy/walk1.png")),
+            self.load_image(resource_path("assets/enemy/walk2.png")),
+            self.load_image(resource_path("assets/enemy/walk3.png"))
         ]
-        self.dead_img = self.load_image("assets/enemy/dead.png")
+        self.dead_img = self.load_image(resource_path("assets/enemy/dead.png"))
 
         w, h = self.walk_imgs[0].get_size()
         self.rect = pygame.Rect(x, y, w, h)

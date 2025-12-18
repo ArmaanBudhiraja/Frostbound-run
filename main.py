@@ -44,21 +44,21 @@ def load_scaled(path, size):
     return pygame.transform.scale(img, size)
 
 GROUND_TILES = [
-    load_scaled(f"assets/tiles/tile{i}.png", (GROUND_TILE_SIZE, GROUND_TILE_SIZE))
+    load_scaled(resource_path(f"assets/tiles/tile{i}.png"), (GROUND_TILE_SIZE, GROUND_TILE_SIZE))
     for i in range(1, 9)
 ]
 
 FLOAT_TILES = [
-    load_scaled(f"assets/tiles/tile{i}.png", (FLOAT_TILE_WIDTH, FLOAT_TILE_HEIGHT))
+    load_scaled(resource_path(f"assets/tiles/tile{i}.png"), (FLOAT_TILE_WIDTH, FLOAT_TILE_HEIGHT))
     for i in range(1, 5)
 ]
 
 # ---------------- BACKGROUND ----------------
-bg_image = load_scaled("assets/images/bg.jpg", (WIDTH, HEIGHT))
+bg_image = load_scaled(resource_path("assets/images/bg.jpg"), (WIDTH, HEIGHT))
 
 # ---------------- EXIT GATE ----------------
 GATE_SIZE = (80, 120)
-gate_image = load_scaled("assets/images/gate.png", GATE_SIZE)
+gate_image = load_scaled(resource_path("assets/images/gate.png"), GATE_SIZE)
 
 # ---------------- LEVEL STATE ----------------
 current_level = 1
@@ -73,7 +73,7 @@ game_won = False
 
 # ---------------- FIREBALLS ----------------
 fireballs = []
-diamond_img = pygame.image.load("assets/images/diamond.png").convert_alpha()
+diamond_img = pygame.image.load(resource_path("assets/images/diamond.png")).convert_alpha()
 diamond_img = pygame.transform.scale(diamond_img, (40, 40))
 
 # ---------------- LOAD LEVEL ----------------
