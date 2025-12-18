@@ -46,7 +46,7 @@ Frostbound Run is a 2D platformer game built using **Python** and **Pygame**, wh
 
 ## 🧱 Project Structure
 
-Frostbound-run/
+Frostbound-run/\n
 │
 ├── main.py
 ├── utils.py
