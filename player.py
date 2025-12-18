@@ -1,5 +1,5 @@
 import pygame
-from main import resource_path
+from utils import resource_path
 class Player:
     def __init__(self, x, y):
         self.scale = 0.1

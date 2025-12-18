@@ -1,18 +1,13 @@
 import pygame
-import sys, os
+import sys
 import random
 from player import Player
 from enemy import Enemy
 from level_loader import load_level
 from fireball import Fireball
+from utils import resource_path
 
 pygame.init()
-def resource_path(relative):
-    try:
-        base = sys._MEIPASS
-    except Exception:
-        base = os.path.abspath(".")
-    return os.path.join(base, relative)
 
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -90,7 +85,7 @@ def load_current_level():
         enemy_data,
         exit_rect
     ) = load_level(
-        f"levels/level{current_level}.json",
+        resource_path(f"levels/level{current_level}.json"),
         GROUND_TILES,
         FLOAT_TILES
     )

@@ -1,5 +1,5 @@
 import pygame
-from main import resource_path
+from utils import resource_path
 class Fireball:
     def __init__(self, x, y, direction):
         self.image = pygame.image.load(resource_path("assets/images/fireball.png")).convert_alpha()
